@@ -1,0 +1,383 @@
+/* ClassIQ dashboard (uses variables and keyframes from style.css) */
+
+/* ---------- Banner ---------- */
+.banner {
+  position: relative;
+  background: var(--card);
+  border-radius: 12px;
+  height: 330px;
+  margin-top: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  animation: fadeUp 0.8s 0.1s ease both;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  bottom: -120px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(196, 245, 115, 0.45),
+    rgba(196, 245, 115, 0) 65%
+  );
+  animation: glowPulse 6s ease-in-out infinite;
+}
+.banner-text {
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
+}
+.welcome {
+  font-size: 13px;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 6px;
+  min-height: 20px;
+}
+.banner h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+.typed-line {
+  margin: 6px 0 10px;
+  font-size: clamp(34px, 5vw, 54px);
+  font-weight: 700;
+  line-height: 1.2;
+  min-height: 66px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.typed {
+  background: linear-gradient(transparent 62%, var(--lime) 62%);
+  padding: 0 4px;
+}
+.caret {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: #000;
+  margin-left: 4px;
+  animation: blink 0.8s steps(1) infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.banner-sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.banner-btn {
+  padding: 10px 22px;
+  font-size: 14px;
+}
+
+.banner-art {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1;
+}
+.banner-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 55% 45%,
+    rgba(196, 245, 115, 0.9),
+    rgba(196, 245, 115, 0) 65%
+  );
+  animation: glowPulse 5s ease-in-out infinite;
+}
+.banner-art img {
+  position: relative;
+  height: 82%;
+  object-fit: contain;
+  animation: slideInRight 1s 0.3s ease both,
+    floatY 4.5s 1.4s ease-in-out infinite;
+}
+
+/* floating course chips */
+.chips {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.chip {
+  position: absolute;
+  background: #fff;
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  animation: floatY 4s ease-in-out infinite, fadeIn 0.8s ease both;
+  white-space: nowrap;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.chip.c1 {
+  left: 56%;
+  top: 16%;
+  animation-delay: 0s, 0.6s;
+}
+.chip.c2 {
+  left: 63%;
+  top: 58%;
+  animation-delay: -1.2s, 0.9s;
+}
+.chip.c3 {
+  left: 48%;
+  top: 74%;
+  animation-delay: -2.2s, 1.2s;
+}
+.chip.c4 {
+  left: 70%;
+  top: 22%;
+  animation-delay: -3s, 1.5s;
+}
+
+/* ---------- Courses ---------- */
+.all-courses {
+  margin-top: 70px;
+  scroll-margin-top: 20px;
+}
+.courses-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+.courses-head h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #3a3a3a;
+}
+.tools input {
+  height: 42px;
+  width: 260px;
+  max-width: 100%;
+  border: 2px solid #000;
+  border-radius: 8px;
+  background: transparent;
+  padding: 0 16px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: 0;
+  transition: box-shadow 0.15s;
+}
+.tools input:focus {
+  box-shadow: 0 0 0 3px rgba(196, 245, 115, 0.9);
+}
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 22px 10px 8px;
+}
+.filter {
+  border: 2px solid #000;
+  background: transparent;
+  border-radius: 30px;
+  padding: 6px 18px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.filter:hover {
+  transform: translateY(-2px);
+}
+.filter.active {
+  background: var(--lime);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 44px 48px;
+  margin-top: 26px;
+  padding: 0 6px 90px;
+}
+.dash-card {
+  background: var(--card);
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  transition: transform 0.25s, box-shadow 0.25s;
+  animation: fadeUp 0.6s var(--d, 0s) ease backwards;
+}
+.dash-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.13);
+}
+.thumb {
+  height: 160px;
+  display: grid;
+  place-items: center;
+  font-size: 62px;
+  position: relative;
+  overflow: hidden;
+}
+.thumb span {
+  display: block;
+  transition: transform 0.4s;
+}
+.dash-card:hover .thumb span {
+  transform: scale(1.18) rotate(-6deg);
+}
+.thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 65%
+  );
+  transform: translateX(-120%);
+}
+.dash-card:hover .thumb::after {
+  transform: translateX(120%);
+  transition: transform 0.8s;
+}
+.tag {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  background: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 11px;
+  border-radius: 20px;
+}
+.info {
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+.info h3 {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.by {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.meta {
+  display: flex;
+  gap: 14px;
+  font-size: 12px;
+  color: #444;
+  margin-top: 2px;
+  flex-wrap: wrap;
+}
+.rating {
+  color: #b8860b;
+  font-weight: 600;
+}
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 14px;
+}
+.price {
+  font-size: 18px;
+  font-weight: 700;
+}
+.enroll {
+  padding: 8px 18px;
+  font-size: 13px;
+  border-radius: 6px;
+  box-shadow: 0 0 #000000, 0 0 #000000, 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1);
+}
+.enroll.done {
+  background: #000;
+  color: var(--lime);
+}
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 50px 0 100px;
+}
+
+/* nav user chip */
+.user-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.avatar-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--lime);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .banner {
+    height: auto;
+    min-height: 340px;
+    padding: 30px 24px 150px;
+    align-items: flex-start;
+  }
+  .banner-art {
+    width: 260px;
+    height: 150px;
+    right: 0;
+  }
+  .chips {
+    display: none;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .courses-head h2 {
+    font-size: 26px;
+  }
+  .user-chip .uname {
+    display: none;
+  }
+}

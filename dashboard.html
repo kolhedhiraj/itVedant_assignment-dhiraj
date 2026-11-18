@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - ClassIQ</title>
+  <meta name="description" content="Online courses, interactive learning tools, all-in-one solution, flexible learning, interactive community">
+  <meta name="keywords" content="ClassIQ, ClassIQ app, ClassIQ Business, ClassIQ Business app, ClassIQ Business app download, ClassIQ Business app download for android, ClassIQ Business app download for ios, ClassIQ Business app download for pc, ClassIQ Business app download for windows, ClassIQ Business app download for mac, ClassIQ Business app download for linux, Teach on ClassIQ, teaching tools, online learning, interactive learning, flexible learning, interactive community, online courses, online classes, online education, online learning platform, online learning app, online learning software, online learning tools, online learning resources, online learning management system, online learning management software">
+  <meta name="author" content="ClassIQ Business">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+<!-- Header -->
+<header class="site-header">
+  <div class="container nav">
+    <div class="nav-left">
+      <a href="index.html" class="brand">
+        <span class="brand-icon">
+            <img src="assets/logo-CSs2XfzI.png" alt="ClassIQ - Empower Your Learning Journey" data-fallback>
+          </span>
+      </a>
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+    </div>
+    <div class="nav-right" id="navRight">
+      <a href="login.html" class="btn btn-dark">Login</a>
+      <a href="signup.html" class="btn btn-dark">SignUp</a>
+    </div>
+  </div>
+</header>
+<!-- Header End -->
+
+<main class="container">
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-text">
+      <p class="welcome" id="welcome"></p>
+      <h2>Enroll in&nbsp; Your Fav Courses</h2>
+      <div class="typed-line" aria-live="polite">
+        <span class="typed" id="typed"></span><span class="caret"></span>
+      </div>
+      <p class="banner-sub">Learn from expert instructors with hands-on, certified courses.</p>
+      <a href="#courses" class="btn btn-lime banner-btn">Browse Courses</a>
+    </div>
+
+    <div class="chips" aria-hidden="true">
+      <span class="chip c1">💻 Coding</span>
+      <span class="chip c2">🎬 3D Animation</span>
+      <span class="chip c3">🎨 UI/UX</span>
+      <span class="chip c4">📊 Data Science</span>
+    </div>
+
+    <div class="banner-art">
+      <img src="assets/avatar-with-laptop.png" alt="Student with a laptop" data-fallback>
+    </div>
+  </section>
+  <!-- Banner End -->
+
+  <!-- Courses -->
+  <section class="all-courses" id="courses">
+    <div class="courses-head">
+      <h2>All Courses
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="#444"><path d="M14 4l8 7-8 7v-4.500C8 13.500 4.500 15.500 2 20c.8-6.500 4.500-11 12-11.500z"/></svg>
+      </h2>
+      <div class="tools">
+        <input type="search" id="search" placeholder="Search courses…" aria-label="Search courses">
+      </div>
+    </div>
+
+    <div class="filters" id="filters" role="tablist"></div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>No courses found. Try a different search.</p>
+  </section>
+    <!-- Courses End -->
+
+</main>
+
+<div class="toast" id="toast"></div>
+<script src="js/script.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
