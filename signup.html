@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SignUp - ClassIQ</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/m-logo-6JdjZV3d.svg">
   <meta name="description" content="Online courses, interactive learning tools, all-in-one solution, flexible learning, interactive community">
   <meta name="keywords" content="ClassIQ, ClassIQ app, ClassIQ Business, ClassIQ Business app, ClassIQ Business app download, ClassIQ Business app download for android, ClassIQ Business app download for ios, ClassIQ Business app download for pc, ClassIQ Business app download for windows, ClassIQ Business app download for mac, ClassIQ Business app download for linux, Teach on ClassIQ, teaching tools, online learning, interactive learning, flexible learning, interactive community, online courses, online classes, online education, online learning platform, online learning app, online learning software, online learning tools, online learning resources, online learning management system, online learning management software">
   <meta name="author" content="ClassIQ Business">
@@ -16,19 +17,22 @@
 <header class="site-header">
   <div class="container nav">
     <div class="nav-left">
-     <a href="index.html" class="brand">
+      <a href="./index.html" class="brand">
         <span class="brand-icon">
-            <img src="assets/logo-CSs2XfzI.png" alt="ClassIQ - Empower Your Learning Journey" data-fallback>
-          </span>
+          <img src="./assets/logo-CSs2XfzI.png" alt="ClassIQ - Empower Your Learning Journey" data-fallback>
+        </span>
       </a>
-      <a href="index.html#courses" class="nav-link">Cources</a>
+      <a href="./index.html#courses" class="nav-link">Courses</a>
     </div>
-    <div class="nav-right">
-      <a href="login.html" class="btn btn-dark">Login</a>
-      <a href="signup.html" class="btn btn-dark">SignUp</a>
+    <span style="font-size:30px;cursor:pointer" class="mobile-hamburger" onclick="openNav()">☰</span>
+    <div class="nav-right sidenav" id="mySidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="./login.html" class="btn btn-dark">Login</a>
+      <a href="./signup.html" class="btn btn-dark">SignUp</a>
     </div>
   </div>
 </header>
+
 <!-- Header End -->
 
 <main class="auth-wrap">

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ClassIQ - Empower Your Learning Journey</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/m-logo-6JdjZV3d.svg">
   <meta name="description" content="Online courses, interactive learning tools, all-in-one solution, flexible learning, interactive community">
   <meta name="keywords" content="ClassIQ, ClassIQ app, ClassIQ Business, ClassIQ Business app, ClassIQ Business app download, ClassIQ Business app download for android, ClassIQ Business app download for ios, ClassIQ Business app download for pc, ClassIQ Business app download for windows, ClassIQ Business app download for mac, ClassIQ Business app download for linux, Teach on ClassIQ, teaching tools, online learning, interactive learning, flexible learning, interactive community, online courses, online classes, online education, online learning platform, online learning app, online learning software, online learning tools, online learning resources, online learning management system, online learning management software">
   <meta name="author" content="ClassIQ Business">
@@ -16,22 +17,25 @@
 
 <body>
 <!-- Header -->
-  <header class="site-header">
-    <div class="container nav">
-      <div class="nav-left">
-        <a href="index.html" class="brand">
+ <header class="site-header">
+  <div class="container nav">
+    <div class="nav-left">
+      <a href="./index.html" class="brand">
         <span class="brand-icon">
-            <img src="assets/logo-CSs2XfzI.png" alt="ClassIQ - Empower Your Learning Journey" data-fallback>
-          </span>
+          <img src="./assets/logo-CSs2XfzI.png" alt="ClassIQ - Empower Your Learning Journey" data-fallback>
+        </span>
       </a>
-        <a href="#courses" class="nav-link">Cources</a>
-      </div>
-      <div class="nav-right">
-        <a href="login.html" class="btn btn-dark">Login</a>
-        <a href="signup.html" class="btn btn-dark">SignUp</a>
-      </div>
+      <a href="#courses" class="nav-link">Courses</a>
     </div>
-  </header>
+    <span style="font-size:30px;cursor:pointer" class="mobile-hamburger" onclick="openNav()">☰</span>
+    <div class="nav-right sidenav" id="mySidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="./login.html" class="btn btn-dark">Login</a>
+      <a href="./signup.html" class="btn btn-dark">SignUp</a>
+    </div>
+  </div>
+</header>
+
 <!-- Header End -->
   <main>
     <!-- Hero -->
@@ -74,7 +78,7 @@
             d="M14.4803 24.4188C14.4785 24.609 14.3789 24.6765 14.2331 24.8044C13.9611 25.0034 13.6323 25.1827 13.3301 25.3586C12.7292 25.7369 12.0982 26.0921 11.4973 26.4705C10.2423 27.2343 8.98723 27.998 7.70553 28.7654C7.05135 29.1508 6.40072 29.5629 5.74655 29.9483C5.52078 30.0869 5.32168 30.2219 5.08882 30.3071C5.01239 30.3444 4.95907 30.3515 4.85242 30.3657C4.85242 30.3657 4.71912 30.3834 4.7991 30.3728C4.7991 30.3728 4.82576 30.3692 4.82931 30.3959C4.74224 30.3532 4.74224 30.3532 4.80265 30.3994C4.74748 30.5967 4.85242 30.3657 4.83285 30.4225C4.85597 30.3923 4.81867 30.3159 4.81513 30.2892C4.82406 30.1524 4.83654 30.0422 4.84548 29.9054C4.87583 29.5215 4.90618 29.1376 4.96319 28.7502C5.03453 28.0624 5.12899 27.3444 5.22699 26.6531C5.45149 25.0767 5.72932 23.4932 6.09067 21.9258C6.17789 21.5615 5.86166 21.2237 5.52755 21.1596C5.14013 21.1026 4.85211 21.3851 4.76134 21.7227C4.40353 23.3168 4.12571 24.9003 3.90475 26.5033C3.79427 27.3048 3.68379 28.1063 3.63017 28.9274C3.56592 29.6685 3.31321 30.6246 3.83194 31.2611C4.83921 32.5109 6.67567 31.0186 7.60185 30.4342C9.03287 29.5656 10.4639 28.6971 11.8949 27.8285C12.6984 27.3418 13.5019 26.8551 14.3054 26.3684C14.9561 25.9563 15.82 25.5159 15.8363 24.6184C15.8435 24.2647 15.6606 23.9092 15.2732 23.8521C14.8857 23.7951 14.484 24.0385 14.4803 24.4188Z"
             fill="black" />
         </svg>
-        <img src="assets/user-pic-second.png" alt="Smiling instructor waving" data-fallback>
+        <img src="assets/user-pic-second.webp" loading="lazy" fetchpriority="high" alt="Smiling instructor waving" data-fallback>
       </div>
     </section>
     <!-- Hero End -->
@@ -128,7 +132,7 @@
     <!-- All in one -->
     <section class="container allinone">
       <div class="allinone-img">
-        <img src="assets/user-pic.png" alt="Smiling instructor waving" data-fallback>
+        <img src="assets/user-pic-second.webp" loading="lazy" fetchpriority="high" alt="Smiling instructor waving" data-fallback>
       </div>
       <div>
         <h2>All-In-One Solution</h2>
@@ -213,7 +217,7 @@
   <!-- Footer End -->
 
   <div class="toast" id="toast"></div>
-  <script src="js/script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
